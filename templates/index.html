@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Car Price Prediction | Home
+    </title>
+
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <!-- CSS file -->
+    <link rel="stylesheet" href="/static/styles.css">
+
+    <!-- javascript file -->
+    <script src="/static/script.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+    <!-- Form -->
+    <!-- Company  Production_Year  Mileage  Engine_Type  Gear_Type -->
+    <!-- <div class="container">
+        <h3>Welcome to Car Price Prediction Project</h3><br>
+        <label for="Company">Company name:</label><br>
+        <input type="number" name="Company" placeholder="Please Enter Company name">
+        <input type="number" name="Production" placeholder="Please Enter Production Year">
+        <input type="number" name="Mileage" placeholder="Please Enter Mileage">
+        <input type="number" name="Engine" placeholder="Please Enter Engine">
+        <input type="number" name="Gear" placeholder="Please Enter Gear">
+        <br>
+        <button>Submit</button>   
+    </div> -->
+
+    <div class="background-image">
+        <img src="/static/Project image .jpg" height="100px" width="200px">
+    </div>
+
+    <form class="container" method="post" action="{{ url_for('predict') }}">
+        <h3>Welcome to Car Price Prediction Project</h3><br>
+        <label for="company">Company:</label>
+        <input type="number" id="company" name="company" required>
+
+        <label for="production_year">Production Year:</label>
+        <input type="number" id="production_year" name="production_year" required>
+
+        <label for="mileage">Mileage:</label>
+        <input type="number" id="mileage" name="mileage" required>
+
+        <label for="engine_type">Engine Type:</label>
+        <input type="number" id="engine_type" name="engine_type" required>
+
+        <label for="gear_type">Gear Type:</label>
+        <input type="number" id="gear_type" name="gear_type" required>
+
+        <button type="submit">Predict Car Price</button>
+    </form>
+
+</body>
+</html>
