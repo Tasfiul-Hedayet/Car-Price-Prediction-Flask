@@ -8,12 +8,13 @@
         Car Price Prediction | Home
     </title>
 
-    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <!-- CSS file -->
-    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 
     <!-- javascript file -->
-    <script src="../static/script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </head>
 
 <body>
@@ -43,7 +44,7 @@
     </div> -->
 
     <div class="background-image">
-        <img src="../static/background.jpg" height="100px" width="200px">
+        <img src="/static/background.jpg" height="100px" width="200px">
     </div>
 
     <form class="container" method="post" action="{{ url_for('predict') }}">
