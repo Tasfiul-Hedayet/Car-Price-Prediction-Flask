@@ -30,7 +30,7 @@ def predict_price(model,company, production_year, mileage, engine_type, gear_typ
     return predicted_price[0]
 
 
-# port = 8000
+port = 8000
 
-# if __name__ == "__main__":
-#     app.run(debug=True, port=port)
+if __name__ == "__main__":
+    app.run(debug=True, port=port)
