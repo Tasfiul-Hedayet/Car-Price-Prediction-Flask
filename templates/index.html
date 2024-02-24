@@ -44,7 +44,9 @@
     </div> -->
 
     <div class="background-image">
-        <img src="/static/background.jpg" height="100px" width="200px">
+        <!-- <img src="/static/background.jpg" height="100px" width="200px"> -->
+        <img src="{{ url_for('static', filename='background.jpg', height="10px", width="20px") }}" alt="Background Image" >
+
     </div>
 
     <form class="container" method="post" action="{{ url_for('predict') }}">
