@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request, url_for
 import pickle
 
-app = Flask(__name__)
+# app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
+
 
 # Load the trained machine learning model (you need to replace 'model.pkl' with your actual model file)
 with open('rf_regression_model.pkl', 'rb') as model_file:
